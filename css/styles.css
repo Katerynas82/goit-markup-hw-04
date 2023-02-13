@@ -20,7 +20,10 @@
   --border-button: #e7e9fc;
   --btn-hover: #9747ff;
   --gradient: rgba(46, 47, 66, 0.7);
+  --border-icon: #8E8F99;
+  
 }
+
 .container {
   max-width: 1158px;
   padding: 0 15px;
@@ -510,4 +513,17 @@ display: flex;
 }
 .customer {
   display: flex;
-}
+  justify-content: space-between;
+  margin-top: 72px;
+  }
+
+.customer-item {
+  box-sizing: border-box;
+  border: 1px solid var(--border-icon);
+  border-radius: 4px;
+  background: var(--border-icon);
+} 
+ .customer-item-icon:hover, :focus {
+  background-color: var(--button-hover-focus);
+ }
+
