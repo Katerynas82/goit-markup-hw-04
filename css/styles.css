@@ -574,7 +574,7 @@ display: flex;
 :focus {
   background-color: var(--footer-icon-h-f);
 }
-/*.icon-block::before {
+.icon-block::before {
   content: "";
   display: block;
   height: 112px;
@@ -596,4 +596,4 @@ display: flex;
 }
 .icon-astronaft::before {
   background-image: url(../images/Vector_4.jpg);
-}*/
+}
