@@ -530,7 +530,7 @@ display: flex;
 }
 .customer-item-icon:hover,
 :focus {
-  background-color: var(--button-h-f);
+  fill: var(--button-h-f);
 }
 
 .footer-block {
@@ -597,3 +597,11 @@ display: flex;
 .icon-astronaft::before {
   background-image: url(../images/Vector_4.jpg);
 }
+
+/*.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
