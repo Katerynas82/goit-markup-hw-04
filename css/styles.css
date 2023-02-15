@@ -149,10 +149,9 @@ body {
   line-height: 0.75;
 }
 
-/*.adr-link:hover,
-:focus {
+.adr-link:is(:hover, :focus) {
   color: var(--focus-hover-color);
-}*/
+}
 
 /* прихований заголовок */
 
@@ -203,24 +202,21 @@ body {
   line-height: 0.75;
   letter-spacing: 0.04em;
   background-color: var(--button-text-portfolio);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   color: var(--hero-text-color);
   display: block;
   margin: 64px auto 0;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
   padding: 16px 32px;
-  bottom: none;
+  border: transparent;
+   
 }
 
-.hero-button-item:hover {
+.hero-button-item:is(:hover, :focus) {
   background-color: var(--button-h-f);
   color: var(--hero-text-color);
 }
 
-.hero-button-item:focus {
-  background-color: var(--button-h-f);
-  color: var(--hero-text-color);
-}
 
 /*блок Наши цілі*/
 
@@ -360,12 +356,7 @@ body {
   padding: 12px 24px;
 }
 
-.button-item:hover {
-  background-color: var(--button-h-f);
-  color: var(--hero-text-color);
-}
-
-.button-item:focus {
+.button-item:is(:hover, :focus) {
   background-color: var(--button-h-f);
   color: var(--hero-text-color);
 }
@@ -427,8 +418,7 @@ body {
   border-top: none;
 }
 
-.project-cont:hover,
-:focus {
+.project-cont:is(:hover, :focus) {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border: 1px solid var(--Light-mode-backgrounds);
@@ -512,8 +502,7 @@ display: flex;
 .team-soc-icon {
   fill: var(--Light-mode-backgrounds);
 }
-.team-soc-link:hover,
-:focus {
+.team-soc-link:is(:hover, :focus) {
   background-color: var(--button-h-f);
 }
 .customer {
@@ -528,8 +517,7 @@ display: flex;
   border-radius: 4px;
   background: var(--border-icon);
 }
-.customer-item-icon:hover,
-:focus {
+.customer-item-icon:is(:hover, :focus) {
   fill: var(--button-h-f);
 }
 
@@ -570,8 +558,7 @@ display: flex;
   fill: var(--Light-mode-backgrounds);
 }
 
-.footer-soc-link:hover,
-:focus {
+.footer-soc-link:is(:hover, :focus) {
   background-color: var(--footer-icon-h-f);
 }
 .icon-block::before {
