@@ -512,18 +512,17 @@ display: flex;
 }
 
 .customer-item {
-  box-sizing: border-box;
-  border: 1px solid var(--border-icon);
+   border: 1px solid var(--border-icon);
   border-radius: 4px;
 }
 
 .customer-item-link {
-    position: relative;
+ box-sizing: 100%;
 }
 
-.customer-item-icon:is(:hover, :focus) {
+.customer-item:is(:hover, :focus) {
   fill: var(--button-h-f);
-  border: 1px solid var(--button-h-f)
+  border: 1px solid var(--button-h-f);
 }
 
 .footer-block {
