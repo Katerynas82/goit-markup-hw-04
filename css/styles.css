@@ -561,7 +561,7 @@ display: flex;
 .footer-soc-link:is(:hover, :focus) {
   background-color: var(--footer-icon-h-f);
 }
-.icon-block::before {
+.content-pic::before {
   content: "";
   display: block;
   height: 112px;
@@ -573,16 +573,16 @@ display: flex;
   background-color: var(--Light-mode-backgrounds);
   }
 .icon-antenna::before {
-  background-image: url(../images/Vector_1.jpg);
+  background-image: url(../images/symbol-defs.svg#icon-antenna);
  }
-.icon-cloc::before {
-  background-image: url(../images/Vector_2.jpg);
+.icon-clock::before {
+  background-image: url(../images/symbol-defs.svg#icon-clock);
 }
-.icon-monitor::before {
-  background-image: url(../images/Vector_3.jpg);
+.icon-diagram::before {
+  background-image: url(../images/symbol-defs.svg#icon-diagram);
 }
-.icon-astronaft::before {
-  background-image: url(../images/Vector_4.jpg);
+.icon-astronaut::before {
+  background-image: url(../images/symbol-defs.svg#icon-astronaut);
 }
 
 /*.icon {
@@ -592,3 +592,5 @@ display: flex;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+*/
+
