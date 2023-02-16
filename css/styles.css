@@ -521,8 +521,10 @@ display: flex;
 }
 
 .customer-item:is(:hover, :focus) {
-  fill: var(--button-h-f);
-  border: 1px solid var(--button-h-f);
+    border: 1px solid var(--button-h-f);
+}
+.customer-item-icon:is(:hover, :focus) {
+  fill: currentColor
 }
 
 .footer-block {
