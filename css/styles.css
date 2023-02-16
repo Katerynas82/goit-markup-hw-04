@@ -514,18 +514,19 @@ display: flex;
 .customer-item {
    border: 1px solid var(--border-icon);
   border-radius: 4px;
+  color: var(--border-icon);
 }
 
 .customer-item-link {
  box-sizing: 100%;
- color: var(--border-icon);
+ fill: currentColor
 }
 
 .customer-item:is(:hover, :focus) {
   border: 1px solid var(--button-h-f);
 }
 .customer-item-icon:is(:hover, :focus) {
-  fill: currentColor
+  fill: var(--button-h-f);
 }
 
 .footer-block {
