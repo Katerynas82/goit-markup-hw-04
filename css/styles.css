@@ -518,11 +518,11 @@ display: flex;
 
 .customer-item-link {
  box-sizing: 100%;
- fill: var(--border-icon);
+ color: var(--border-icon);
 }
 
 .customer-item:is(:hover, :focus) {
-    border: 1px solid var(--button-h-f);
+  border: 1px solid var(--button-h-f);
 }
 .customer-item-icon:is(:hover, :focus) {
   fill: currentColor
