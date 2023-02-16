@@ -20,7 +20,7 @@
   --border-button: #e7e9fc;
   --btn-h: #9747ff;
   --gradient: rgba(46, 47, 66, 0.7);
-  --border-icon: #8e8f99;
+  --border-icon: rgba(142, 143, 153, 1);
   --footer-dg-icon: rgba(255, 255, 255, 0.1);
   --footer-icon-h-f: #31d0aa;
 }
@@ -512,7 +512,7 @@ display: flex;
 }
 
 .customer-item {
-   border: 1px solid var(--border-icon);
+  border: 1px solid var(--border-icon);
   border-radius: 4px;
   color: var(--border-icon);
 }
