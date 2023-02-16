@@ -519,7 +519,7 @@ display: flex;
 
 .customer-item-link {
  box-sizing: 100%;
- fill: currentColor;
+ fill: var(--border-icon);
 }
 
 .customer-item:is(:hover, :focus) {
