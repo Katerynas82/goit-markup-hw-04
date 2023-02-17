@@ -59,6 +59,9 @@ img {
 * {
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+}
 body {
   color: var(--primary-text-color);
   font-family: "Roboto", sans-serif;
@@ -84,7 +87,7 @@ body {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 18px;
-  line-height: 0.75;
+  line-height: 1.33;
   color: var(--second-logo-color);
   text-decoration: none;
   display: flex;
@@ -105,34 +108,37 @@ body {
   align-items: center;
   margin-left: 72px;
 }
+/* 
+.link:is(:hover, :focus) {
+  color: var(--button-h-f);
+}
 .link {
   display: block;
   text-decoration: none;
   color: var(--primary-text-color);
-}
+}*/
 .link-nav {
   display: block;
   text-decoration: none;
   color: var(--title-text-color);
 }
-.link:is(:hover, :focus) {
-  color: var(--button-h-f);
-}
+
 .link-nav:is(:hover, :focus) {
   color: var(--button-h-f);
+  outline: none;
 }
-.link-nav.current {
+.item-nav .current {
   color: var(--button-h-f);
 }
 
-.item {
+.item-nav {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
 
-.site-nav .item:not(:last-child) {
+.site-nav .item-nav:not(:last-child) {
   margin-right: 40px;
 }
 
@@ -146,7 +152,7 @@ body {
 .adr {
   font-size: 16px;
   font-style: normal;
-  line-height: 0.75;
+  line-height: 1.5;
 }
 
 .adr-link:is(:hover, :focus) {
@@ -199,7 +205,7 @@ body {
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
-  line-height: 0.75;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   background-color: var(--button-text-portfolio);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -208,15 +214,14 @@ body {
   display: block;
   margin: 64px auto 0;
   padding: 16px 32px;
-  border: transparent;
-   
+  border: transparenT;
 }
 
 .hero-button-item:is(:hover, :focus) {
   background-color: var(--button-h-f);
   color: var(--hero-text-color);
+  outline: none;
 }
-
 
 /*блок Наши цілі*/
 
@@ -323,8 +328,7 @@ body {
   justify-content: center;
 }
 
-.item:hover,
-:focus {
+.item-btn:is(:hover, :focus) {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   outline: none;
@@ -332,7 +336,7 @@ body {
 .main {
   padding-top: 96px;
 }
-.filter .item:not(:last-child) {
+.filter .item-btn:not(:last-child) {
   margin-right: 24px;
 }
 
@@ -343,7 +347,7 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 0.75;
+  line-height: 1.5;
   color: var(--button-text-portfolio);
   align-items: center;
   text-align: center;
@@ -416,12 +420,11 @@ body {
   padding: 32px 0 32px 16px;
   border: 1px solid var(--border-button);
   border-top: none;
-}
+ }
 
 .project-cont:is(:hover, :focus) {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border: 1px solid var(--Light-mode-backgrounds);
 }
 
 .project-link {
@@ -504,6 +507,7 @@ display: flex;
 }
 .team-soc-link:is(:hover, :focus) {
   background-color: var(--button-h-f);
+  outline: none;
 }
 .customer {
   display: flex;
@@ -511,23 +515,33 @@ display: flex;
   margin: 0 auto;
 }
 
-.customer-item {
+/*.customer-item {
+  width: 168px;
+  height: 88px;
+  
+}*/
+.customer-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 88px;
   border: 1px solid var(--border-icon);
   border-radius: 4px;
   color: var(--border-icon);
 }
-
-.customer-item-link {
- box-sizing: 100%;
- fill: var(--border-icon);
+.customer-item-icon {
+  fill: currentColor;
 }
-
-.customer-item:is(:hover, :focus) {
+.customer-item-link:is(:hover, :focus) {
   border: 1px solid var(--button-h-f);
+  color: var(--button-h-f);
 }
+
+/*
 .customer-item-icon:is(:hover, :focus) {
   fill: var(--button-h-f);
-}
+}*/
 
 .footer-block {
   display: flex;
@@ -569,20 +583,18 @@ display: flex;
 .footer-soc-link:is(:hover, :focus) {
   background-color: var(--footer-icon-h-f);
 }
-.content-pic::before {
-  content: "";
-  display: block;
+.content-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 112px;
   width: 264px;
-  background-size: 60px 64px;
-  background-repeat: no-repeat;
-  background-position: center;
   border-radius: 4px;
   background-color: var(--Light-mode-backgrounds);
-  }
+}
 .icon-antenna::before {
   background-image: url(../images/antenna\ 1.svg);
- }
+}
 .icon-clock::before {
   background-image: url(../images/clock\ 1.svg);
 }
@@ -601,4 +613,3 @@ display: flex;
   stroke: currentColor;
   fill: currentColor;
 */
-
